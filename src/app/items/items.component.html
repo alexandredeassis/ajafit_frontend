@@ -1,0 +1,21 @@
+<p>
+  items 
+
+</p>
+
+<ul *ngFor="let i of items" (click)="onSelect(i)">
+    <li><span class="badge">{{i.id}} - {{i.price}} - {{i.descriptions}}</span></li>
+    
+</ul>
+
+<hr/>
+<div class="badge" *ngIf="item" >{{item.id}} - {{item.price}} - {{item.descriptions}}</div>
+<div *ngIf="item" >
+  <label>price:
+    <input [(ngModel)]="item.price" placeholder="price"> -
+  </label>
+</div>
+
+<app-item-detail [item]="item"></app-item-detail>
+
+
