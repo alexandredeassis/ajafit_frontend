@@ -16,6 +16,8 @@ import { ItemDetailComponent } from './item-detail/item-detail.component';
 import {ItemsService} from './items.service';
 import { AppRountingModule } from './/app-rounting.module';
 
+import { ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/filter';
 
 
 import {
