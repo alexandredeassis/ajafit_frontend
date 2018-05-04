@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { OrdersComponent } from './orders/orders.component';
 import { UsersComponent } from './users/users.component';
 import { ItemsComponent } from './items/items.component';
-import { MenuComponent } from './menu/menu.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 
 import {ItemsService} from './items.service';
@@ -54,6 +54,7 @@ import {
   MatToolbarModule,
   MatTooltipModule,
 } from '@angular/material';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -63,8 +64,9 @@ import {
     OrdersComponent,
     UsersComponent,
     ItemsComponent,
-    MenuComponent,
-    ItemDetailComponent
+    DashboardComponent,
+    ItemDetailComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

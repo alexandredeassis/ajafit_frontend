@@ -1,0 +1,205 @@
+<mat-toolbar  style="height:70px; margin:0; background-color: cadetblue;">
+  <span style="font-size: 50px; color:white; font-weight: bold;">AjaFit</span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span style="flex:1 1 auto;"></span>
+
+  <span style="font-size: 70px; color:white; font-weight: bold; margin-right: 20px; ">
+    <a href="#">
+        <mat-icon md-48>explore</mat-icon>
+      </a>
+      
+  </span>
+
+</mat-toolbar>
+
+
+<mat-grid-list cols="1" rowHeight="500px" style="background-color: bisque;">
+    <mat-grid-tile color="accent" style="background: url('assets/hightlight.png') no-repeat center;">
+      
+          <div style="height: 100%; width: 100%; text-align: center;">
+            <span style="position: relative; top: 0;">
+              <h1>ALIMENTE-SE COM<BR/>INTELIGÊNCIA</h1>
+              
+            </span>
+             <div style="margin-top: auto; height: 65%;"></div>          
+            <span style="position: relative; bottom:40px; text-align: center; width: 60%; background-color: red;">
+              <p class="desc">
+                AjaFit pode te ajudar a alcançar seus objetivos te entregando uma alimentação de qualidade e com praticidade.
+                </p>
+                <p class="desc"> 
+                Nós planejamos, compramos, preparamos e te entregamos o alimento que você precisa.
+              </p>
+              <p class="desc">
+                  Assim, você fica livre para poder focar em todo o resto.
+                </p>
+            </span>  
+          </div>
+      
+   </mat-grid-tile>
+   <mat-grid-tile style="background-color: beige;">
+      
+    <div style="height: 100%; width: 100%;">
+      <span style="position: relative; top: 0; text-align: center;">
+        <h1>COMO FUNCIONA</h1>
+      </span>
+      <BR/>
+      <BR/>
+
+  <mat-grid-list cols="3" rowHeight="500px" style="text-align: center;">
+      <mat-grid-tile>
+        <div style="width: 100%; height: 100%; margin-left:10px;" class="button-row">
+            
+            <button mat-fab  style="width:150px; height: 150px; background-color: cadetblue;"> 
+              <i class="material-icons" style="font-size: 110px;">touch_app</i>
+             </button>
+             <br/>
+            <h1>VOCÊ ESCOLHE</h1>
+            
+            <p style="color: purple; font-size: 20px;">
+              Decida qual plano é melhor pra você. Escolha dentre as opções de refeições, lanches ou adquira um kit diário completo. 
+            </p>
+            
+            
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div style="width: 100%; height: 100%;" class="button-row">
+            
+          <button mat-fab  style="width:150px; height: 150px; background-color: cadetblue;"> 
+            <i class="material-icons" style="font-size: 110px;">home</i>
+           </button>
+           <br/>
+           <h1>NÓS ENTREGAMOS</h1>
+          
+           <p style="color: purple; font-size: 20px;">
+            Receba seu kit alimentar diariamente na comodidade seu seu lar
+          </p>
+          
+          
+      </div>
+      </mat-grid-tile>
+        <mat-grid-tile>
+          <div style="width: 100%; height: 100%;" class="button-row">
+            
+            <button mat-fab  style="width:150px; height: 150px; background-color: cadetblue;"> 
+              <i class="material-icons" style="font-size: 110px;">thumb_up</i>
+             </button>
+             <br/>
+             <h1>VOCÊ APROVEITA</h1>
+          
+             <p style="color: purple; font-size: 20px;">
+              Abra o pacote e encontre seu alimento fresco e saudável!
+            </p>
+              
+            
+        </div>
+          </mat-grid-tile>
+      </mat-grid-list>
+                 
+     
+    </div>
+ 
+</mat-grid-tile>
+
+<mat-grid-tile> 
+  <span style="position: absolute; top:0;"><h1>NOSSOS PLANOS</h1></span>
+
+
+  <mat-card class="plan-card">
+      <img mat-card-image src="assets/salada-de-macarrao-com-maionese.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content class="card-content"> 
+        <h3>Total Week</h3>
+        <p>
+          Este plano contempla um kit com um total de 4 refeições por dia, para os 7 dias da semana.
+          <br/>
+          <br/>2 opções de de salada + 2 lanches por dia.
+        </p>
+      </mat-card-content>
+
+      <mat-card-actions style="text-align: center;">
+          <button mat-button class="button-detail">SABER MAIS</button>
+      </mat-card-actions>
+
+    </mat-card>
+  
+    <mat-card class="plan-card">
+        <img mat-card-image src="assets/salada-de-macarrao-com-maionese.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content class="card-content"> 
+          <h3>Partial Week</h3>
+          <p>
+            Este plano contempla um kit com um total de 3 refeições por dia, para os 7 dias da semana.
+            <br/>
+            <br/>1 opção de salada + 2 lanches por dia
+          </p>
+
+        </mat-card-content>
+
+        <mat-card-actions style="text-align: center;">
+            <button mat-button class="button-detail">SABER MAIS</button>
+        </mat-card-actions>
+
+  </mat-card>
+  
+  <mat-card class="plan-card">
+      <img mat-card-image src="assets/salada-de-macarrao-com-maionese.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content class="card-content"> 
+        <h3>Minimal Week</h3>
+        <p>
+          Este plano contempla um kit com um total de 2 refeições por dia, para os 7 dias da semana.
+          <br/>
+          <br/>1 opção de salada + 1 lanche por dia
+        </p>
+
+
+      </mat-card-content>
+
+      <mat-card-actions style="text-align: center;">
+          <button mat-button class="button-detail">SABER MAIS</button>
+      </mat-card-actions>
+
+</mat-card>
+
+  <mat-card class="plan-card">
+      <img mat-card-image src="assets/salada-de-macarrao-com-maionese.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content class="card-content"> 
+        <h3>Total Day</h3>
+        <p>
+          Este plano contempla um kit com um total de 4 refeiçõe para um dia.
+          <br/>
+          <br/>2 opções de de salada + 2 lanches.
+        </p>
+      </mat-card-content>
+
+      <mat-card-actions style="text-align: center;">
+          <button mat-button class="button-detail">SABER MAIS</button>
+      </mat-card-actions>
+
+    </mat-card>
+
+      <mat-card class="plan-card">
+          <img mat-card-image src="assets/salada-de-macarrao-com-maionese.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content class="card-content"> 
+            <h3>Partial Day</h3>
+            <p>
+              Este plano contempla um kit com um total de 2 refeições pora um dia.
+              <br/>
+              <br/> 1 opção de salada + 1 Lanche
+              
+            </p>
+          </mat-card-content>
+          <mat-card-actions style="text-align: center;">
+              <button mat-button class="button-detail">SABER MAIS</button>
+          </mat-card-actions>
+        </mat-card>
+    
+        
+    
+    
+
+  </mat-grid-tile>
+  <mat-grid-tile>
+    
+  </mat-grid-tile>
+
+</mat-grid-list>

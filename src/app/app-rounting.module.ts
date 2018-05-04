@@ -4,7 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {ItemsComponent} from './items/items.component';
 import {OrdersComponent} from './orders/orders.component';
 
-import {MenuComponent} from './menu/menu.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 const routes: Routes = [{
   path: 'items',
@@ -13,8 +13,13 @@ const routes: Routes = [{
   path: 'orders',
   component: OrdersComponent
 },{
-  path: 'menu',
-  component: MenuComponent
+  path: 'dashboard',
+  component: DashboardComponent
+},
+{
+  path: '',
+  redirectTo: 'dashboard',
+  pathMatch: 'full'
 }
 ]
 
