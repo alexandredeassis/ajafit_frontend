@@ -47,13 +47,13 @@ h1 {
 
   .plan-card{
     background-color: beige;
-    height: 350px;
+    height: 380px;
     max-width: 280px; 
     margin-top: 70px;
     margin-left: 30px;
   }
   .button-detail{
-    background-color: cadetblue; 
+    background-color: brown; 
     color: white;
     font-size: 20px;
     font-weight: bold;
