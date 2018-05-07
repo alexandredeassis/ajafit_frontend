@@ -1,0 +1,33 @@
+
+h1 {
+    color: rgb(63, 77, 104);
+    font-size:35px;
+    font-family: 'Fredericka the Great', cursive;
+    
+        
+  }
+  .plan-card{
+    background-color: beige;
+    height: 330px;
+    max-width: 500px; 
+    
+  }
+  .plan-card img{
+    height: 200px;
+  }
+  .button-detail{
+    background-color: brown; 
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+
+  }
+
+  .card-content{
+     
+   text-align: center;
+   font-size: 18px; 
+   font-family: 'Inder', sans-serif;
+   
+}

@@ -1,17 +1,29 @@
 h1 {
-    color: rgb(63, 77, 104);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 200%;
-        
+  color: rgb(63, 77, 104);
+  font-size:35px;
+  font-family: 'Fredericka the Great', cursive;
+         
   }
+  h2 {
+    color: gray;
+    font-size:25px;
+    font-family: 'Fredericka the Great', cursive;
+           
+  }
+
   .desc {
     color : rgb(63, 77, 104);
-    font-family: Arial, Helvetica, sans-serif;
+    
     font-style: italic;
-    font-size: 120%;
+    
     text-align: center;
     width: 80%;
     margin: auto;
+
+         
+   text-align: center;
+   font-size: 18px; 
+   font-family: 'Inder', sans-serif;
         
   }
   .example-container {

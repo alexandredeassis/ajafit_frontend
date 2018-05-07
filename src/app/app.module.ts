@@ -55,6 +55,7 @@ import {
   MatTooltipModule,
 } from '@angular/material';
 import { MenuComponent } from './menu/menu.component';
+import { CombosComponent } from './combos/combos.component';
 
 
 
@@ -66,7 +67,8 @@ import { MenuComponent } from './menu/menu.component';
     ItemsComponent,
     DashboardComponent,
     ItemDetailComponent,
-    MenuComponent
+    MenuComponent,
+    CombosComponent
   ],
   imports: [
     BrowserModule,
