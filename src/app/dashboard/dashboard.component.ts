@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/filter';
 
+import {UsersComponent} from '../users/users.component';
+import {User} from '../users/user';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +14,9 @@ import 'rxjs/add/operator/filter';
 export class DashboardComponent implements OnInit {
   order: string;
   order1: Object;
-  constructor(private route: ActivatedRoute) { }
+  user: User;
+
+  constructor(private route: ActivatedRoute, private usersComponent: UsersComponent) { }
 
   ngOnInit() {
     console.log('testando...');
@@ -30,7 +34,12 @@ export class DashboardComponent implements OnInit {
         this.order = JSON.stringify(this.order1);
         console.log('params:'+JSON.stringify(this.order1) );
       });
+      this.user = this.usersComponent.getUser();
   }
   
+  getUser(): User{
+    console.log('oxi...'+this.user);
+    return this.usersComponent.getUser();
+  }
 
 }

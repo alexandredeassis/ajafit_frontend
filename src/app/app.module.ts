@@ -19,6 +19,9 @@ import { AppRountingModule } from './/app-rounting.module';
 import { ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/filter';
 
+import { MenuComponent } from './menu/menu.component';
+import { CombosComponent } from './combos/combos.component';
+import { MenuDayComponent } from './menu-day/menu-day.component';
 
 import {
   MatAutocompleteModule,
@@ -54,9 +57,6 @@ import {
   MatToolbarModule,
   MatTooltipModule,
 } from '@angular/material';
-import { MenuComponent } from './menu/menu.component';
-import { CombosComponent } from './combos/combos.component';
-
 
 
 @NgModule({
@@ -68,7 +68,8 @@ import { CombosComponent } from './combos/combos.component';
     DashboardComponent,
     ItemDetailComponent,
     MenuComponent,
-    CombosComponent
+    CombosComponent,
+    MenuDayComponent
   ],
   imports: [
     BrowserModule,
@@ -108,7 +109,7 @@ import { CombosComponent } from './combos/combos.component';
     MatTooltipModule,
     NgbModule.forRoot()
   ],
-  providers: [ItemsService],
+  providers: [ItemsService, UsersComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

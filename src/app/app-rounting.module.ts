@@ -6,7 +6,12 @@ import {OrdersComponent} from './orders/orders.component';
 
 import {DashboardComponent} from './dashboard/dashboard.component';
 
+import {MenuDayComponent} from './menu-day/menu-day.component';
+
 const routes: Routes = [{
+  path: 'menuday',
+  component: MenuDayComponent
+},{
   path: 'items',
   component: ItemsComponent
 },{
