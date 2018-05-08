@@ -15,7 +15,7 @@ export class ItemsComponent implements OnInit {
   items: Item[];
 
   getItems(): void {
-    this.items = this.itemsService.items;
+    
   }
   onSelect(item: Item){
     this.item=item;

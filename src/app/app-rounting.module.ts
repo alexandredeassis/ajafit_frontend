@@ -9,7 +9,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {MenuDayComponent} from './menu-day/menu-day.component';
 
 const routes: Routes = [{
-  path: 'menuday',
+  path: 'menuday/:id',
   component: MenuDayComponent
 },{
   path: 'items',

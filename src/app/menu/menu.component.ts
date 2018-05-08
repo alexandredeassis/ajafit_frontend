@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 import {UsersComponent} from '../users/users.component';
 import {ItemsComponent} from '../items/items.component';
 
@@ -20,6 +21,7 @@ export class MenuComponent implements OnInit {
   constructor(private usersComponent: UsersComponent) { this.load();}
 
   ngOnInit() {
+  
   }
 
   load(): void{

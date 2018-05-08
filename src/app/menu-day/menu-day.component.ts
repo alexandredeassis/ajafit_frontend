@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/filter';
 
 @Component({
   selector: 'app-menu-day',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuDayComponent implements OnInit {
 
-  constructor() { }
+  id: number;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.id = +this.route.snapshot.paramMap.get('id');
+    this.route.queryParamMap.subscribe(params => {
+      console.log('menu day'+ params[0] );
+    });
   }
 
 }
