@@ -3,5 +3,5 @@ export class Item{
     price: string;
     descriptions: string;
     images: string[];
-    
+    avaliable: boolean;    
 }

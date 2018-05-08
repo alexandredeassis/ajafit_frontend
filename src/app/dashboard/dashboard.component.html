@@ -4,13 +4,14 @@
   <!-- This fills the remaining space of the current row -->
   <span style="flex:1 1 auto;"></span>
 
-  {{getUser()}}
+  <span *ngIf="getUser()">{{getUser().name}}</span>
   <span style="font-size: 30px; color:white; font-weight: bold; margin-right: 50px; ">
     <a href="#">
         <mat-icon style="color:blue;">perm_identity</mat-icon>
     </a>
       
   </span>
+
 
 </mat-toolbar>
 
