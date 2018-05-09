@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 
 
 import {UsersComponent} from '../users/users.component';
@@ -14,6 +14,8 @@ import {Item} from '../items/item';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
+
+@Injectable()
 export class MenuComponent implements OnInit {
 
   menu: Menu;
@@ -51,4 +53,8 @@ export class MenuComponent implements OnInit {
     this.menu.monday=monday;
   }
 
+  getDay(id: number): Day{
+    return this.menu.monday;
+  }
+   
 }

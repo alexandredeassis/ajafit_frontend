@@ -109,7 +109,7 @@ import {
     MatTooltipModule,
     NgbModule.forRoot()
   ],
-  providers: [ItemsService, UsersComponent],
+  providers: [ItemsService, UsersComponent, MenuComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,9 @@
+.header-toolbar {
+    position: fixed;
+    z-index: 2;
+    }
+    .material-icons {
+        font-size: 48px;
+        color:white;
+      }
+      

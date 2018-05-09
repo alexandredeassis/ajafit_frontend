@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/filter';
 
+import {Menu} from '../menu/menu';
+import {Day} from '../menu/day';
+
+import {MenuComponent} from '../menu/menu.component';
+
 @Component({
   selector: 'app-menu-day',
   templateUrl: './menu-day.component.html',
@@ -10,13 +15,13 @@ import 'rxjs/add/operator/filter';
 export class MenuDayComponent implements OnInit {
 
   id: number;
-  constructor(private route: ActivatedRoute) { }
+  menu: Menu;
+  day: Day;
+  constructor(private route: ActivatedRoute, private menuComponent: MenuComponent) { }
 
   ngOnInit() {
     this.id = +this.route.snapshot.paramMap.get('id');
-    this.route.queryParamMap.subscribe(params => {
-      console.log('menu day'+ params[0] );
-    });
+    this.day = this.menuComponent.getDay(this.id);  
   }
 
 }
