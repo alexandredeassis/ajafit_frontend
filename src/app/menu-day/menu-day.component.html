@@ -3,39 +3,46 @@
       
           <div style="height: 100%; width: 100%;">
       
-  
+                <mat-card class="menu-card">
+        
+                <mat-card-header class="menu-card-header">
+                      <div style="text-align: center; width:100%">
+                          <mat-card-title class="menu-card-title">{{day.weekday}}</mat-card-title>
+          
+                      </div>
+                    
+                  </mat-card-header>
+                  
+                <mat-card-content  class="card-content" style="height: 60%; top:20px;"> 
+                  
+                  <div style="text-align: center; font-style: normal;"><h2>MONTE SUA SALADA</h2></div>
 
-          <mat-card class="menu-card">
-    
-            <mat-card-header class="menu-card-header">
-                  <div style="text-align: center; width:100%">
-                      <mat-card-title class="menu-card-title">{{day.weekday}}</mat-card-title>
-      
+                  
+                  <div style="display:flex; width: 250px; height:150px; background-color: black; margin:auto; margin-top: 20px;">
+                    <div [class]="saladItemPanel(1)" *ngIf="salad1">{{day.option1.descriptions}}</div>
+                    <div [class]="saladItemPanel(2)" *ngIf="salad2">{{day.option2.descriptions}}</div>
+                    <div [class]="saladItemPanel(3)" *ngIf="salad3">{{day.option3.descriptions}}</div>
                   </div>
-                
-              </mat-card-header>
-              
-            <mat-card-content  class="card-content" style="height: 60%;"> 
-              <div style="text-align: center; font-style: normal;"><h2>SALADA</h2></div>
-              <div style="width: 150px; height:100px; background-color:red; margin:auto;"></div>
-              <div style="display: grid;  grid-template-columns: 33% 33% 33%; grid-row-gap: 2em; grid-column-gap: 10px;  width:80%; margin:auto;">
-                <div>Salada Macarrao com frango desfiado ao molho pesto</div>
-                <div>Salada Macarrao com carne moida molho pesto</div>
-                <div>Salada mix de folhas com atum e milho ao molho pesto</div>
-              </div>
+                  <div style="display: grid;  grid-template-columns: 33% 33% 33%; grid-row-gap: 2em; grid-column-gap: 10px;  width:80%; margin:auto; margin-top:20px;">
+                    <section class="salad-section">
+                      <div><mat-checkbox [disabled]="salad2 && salad3" class="salad-item" [(ngModel)]="salad1">{{day.option1.descriptions}}</mat-checkbox></div>
+                      <div><mat-checkbox [disabled]="salad1 && salad3" class="salad-item" [(ngModel)]="salad2">{{day.option2.descriptions}}</mat-checkbox></div>
+                      <div><mat-checkbox  [disabled]="salad1 && salad2" class="salad-item" [(ngModel)]="salad3">{{day.option3.descriptions}}- {{saladCount()}}</mat-checkbox></div>
+                  </section>
+                  </div>
 
-            </mat-card-content>
-      
-            <mat-card-actions style="text-align: center; top:200px;">
-                <button mat-button class="button-detail" routerLink="/menuday">SALVAR</button>
-            </mat-card-actions>
-      
-          </mat-card>
+                </mat-card-content>
+          
+                <mat-card-actions style="text-align: center; top:200px;">
+                    <button mat-button class="button-detail" routerLink="/menuday">SALVAR</button>
+                </mat-card-actions>
+          
+              </mat-card>
           </div>
       
    </mat-grid-tile>
  </mat-grid-list>
 
 <p>
-  menu-day works! {{id}} - {{day.weekday}}
+  
 </p>
