@@ -17,12 +17,13 @@
                   
                   <div style="text-align: center; font-style: normal;"><h2>MONTE SUA SALADA</h2></div>
 
-                  
-                  <div style="display:flex; width: 250px; height:150px; background-color: black; margin:auto; margin-top: 20px;">
-                    <div [class]="saladItemPanel(1)" *ngIf="salad1">{{day.option1.descriptions}}</div>
-                    <div [class]="saladItemPanel(2)" *ngIf="salad2">{{day.option2.descriptions}}</div>
-                    <div [class]="saladItemPanel(3)" *ngIf="salad3">{{day.option3.descriptions}}</div>
-                  </div>
+                  <div style="display:flex; background-color:red; width:100%;">
+                    <div style="display:flex; width: 250px; height:150px; background-color: black; margin:auto; margin-top: 20px;">
+                      <div [class]="saladItemPanel(1)" *ngIf="salad1">{{day.option1.descriptions}}</div>
+                      <div [class]="saladItemPanel(2)" *ngIf="salad2">{{day.option2.descriptions}}</div>
+                      <div [class]="saladItemPanel(3)" *ngIf="salad3">{{day.option3.descriptions}}</div>
+                    </div>
+                </div>
                   <div style="display: grid;  grid-template-columns: 33% 33% 33%; grid-row-gap: 2em; grid-column-gap: 10px;  width:80%; margin:auto; margin-top:20px;">
                     <section class="salad-section">
                       <div><mat-checkbox [disabled]="salad2 && salad3" class="salad-item" [(ngModel)]="salad1">{{day.option1.descriptions}}</mat-checkbox></div>
