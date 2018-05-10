@@ -9,5 +9,9 @@ export class Day{
     option1: Item;
     option2: Item;
     option3: Item;
+    snacks1: Item[];
+    snacks2: Item[];
+    snacks3: Item[];
     valid: boolean;
+
 }

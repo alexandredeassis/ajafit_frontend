@@ -15,27 +15,51 @@
                   
                 <mat-card-content  class="card-content" style="height: 60%; top:20px;"> 
                   
-                  <div style="text-align: center; font-style: normal;"><h2>MONTE SUA SALADA</h2></div>
+                  <div style="text-align: center; font-style: normal;"><h2>SALADA</h2></div>
 
                   <div style="display:grid; width:80%; grid-template-columns: 20% 40% 10% 30%; grid-column-gap: 0px; margin:auto;">
-                    <div style="margin-top:50px; width:350px; text-align: center;">Cada opção de salada equivale uma porção de volume em torno de 350 ml</div>
-                    <div style="display:flex; width: 250px; height:150px; background-color: black; margin:auto; margin-top: 20px; margin-right:0px;">
-                      <div [class]="saladItemPanel(1)" *ngIf="salad1">{{day.option1.descriptions}}</div>
-                      <div [class]="saladItemPanel(2)" *ngIf="salad2">{{day.option2.descriptions}}</div>
-                      <div [class]="saladItemPanel(3)" *ngIf="salad3">{{day.option3.descriptions}}</div>
+                    <div class="salad-descriptions">Cada opção de salada equivale uma porção de volume em torno de 350 ml</div>
+                    <div style="display:flex; width: 250px; height:150px; background-color: darkgreen ; margin:auto; margin-top: 20px; margin-right:0px;">
+                 
+                      <div style="display:grid; grid-template-columns: 100%;">
+                        <div class="salad-volume-price" *ngIf="saladCount() >= 1">{{saladVolume()}}</div>
+                          <div style="display:flex; width: 250px; height:100px;">
+                            <div [class]="saladItemPanel(1)" *ngIf="salad1">{{day.option1.descriptions}}</div>
+                            <div [class]="saladItemPanel(2)" *ngIf="salad2">{{day.option2.descriptions}}</div>
+                            <div [class]="saladItemPanel(3)" *ngIf="salad3">{{day.option3.descriptions}}</div>
+                          </div>
+                          <div class="salad-volume-price" *ngIf="saladCount() >= 1">R$ {{(saladPrice()) | number:'0.00'}}</div>
+                      </div> 
+                    
                     </div>
+                      
+                    
                     <div style="vertical-align: center; display: flex; align-content: flex-end; justify-content: flex-end;" >
-                      <mat-checkbox [disabled]="saladCount() != 1" [(ngModel)]="double" style="align-self: center;">Dobrar</mat-checkbox></div>
-                    <div style="margin-top:50px; width:350px; text-align: center;">Escolha Dobrar para duplicar a quantidade de salada do mesmo sabor</div>
+                      <mat-checkbox [disabled]="saladCount() != 1" [(ngModel)]="double" style="align-self: center;">Dobrar</mat-checkbox>
+                    </div>
+                    <div class="salad-descriptions">Escolha Dobrar para duplicar a quantidade de salada do mesmo sabor</div>
                 </div>
                   <div style="display: grid; height:100px; grid-template-columns: 33% 33% 33%; grid-row-gap: 2em; grid-column-gap: 10px;  width:80%; margin:auto; margin-top:20px; text-align: center;">
                     
-                      <div style="overflow:auto;"><mat-checkbox [disabled]="(salad2 && salad3) || (salad2 && double) || (salad3 && double)" class="salad-item" [(ngModel)]="salad1">{{day.option1.descriptions}}</mat-checkbox></div>
-                      <div style="overflow:auto;"><mat-checkbox [disabled]="(salad1 && salad3) || (salad1 && double) || (salad3 && double)" class="salad-item" [(ngModel)]="salad2">{{day.option2.descriptions}}</mat-checkbox></div>
-                      <div style="overflow:auto;"><mat-checkbox  [disabled]="(salad1 && salad2) || (salad1 && double) || (salad2 && double)" class="salad-item" [(ngModel)]="salad3">{{day.option3.descriptions}}</mat-checkbox></div>
+                      <div><mat-checkbox [disabled]="(salad2 && salad3) || (salad2 && double) || (salad3 && double)" class="salad-item" [(ngModel)]="salad1">{{day.option1.descriptions}}</mat-checkbox></div>
+                      <div><mat-checkbox [disabled]="(salad1 && salad3) || (salad1 && double) || (salad3 && double)" class="salad-item" [(ngModel)]="salad2">{{day.option2.descriptions}}</mat-checkbox></div>
+                      <div><mat-checkbox [disabled]="(salad1 && salad2) || (salad1 && double) || (salad2 && double)" class="salad-item" [(ngModel)]="salad3">{{day.option3.descriptions}}</mat-checkbox></div>
                     
                   </div>
 
+                  <hr color="primary"/>
+                  <div style="text-align: center; font-style: normal;"><h2>SNACKS</h2></div>
+                  <div style="display:grid; grid-template-columns: 33% 33% 33%;">
+                      <div style="background-color: red; height:200px;">
+                       <ul>
+                         <li *ngFor="let i of day.snacks1">
+                            {{i.id}} - {{i.descriptions}} - {{i.price}}
+                         </li>
+                       </ul> 
+                      </div>
+                      <div style="background-color:green; height:200px;">a</div>
+                      <div style="background-color: blue; height:200px;">a</div>
+                  </div>
                 </mat-card-content>
           
                 <mat-card-actions style="text-align: center;">

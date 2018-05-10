@@ -1,6 +1,6 @@
 export class Item{
     id: number;
-    price: string;
+    price: number;
     descriptions: string;
     images: string[];
     avaliable: boolean;    

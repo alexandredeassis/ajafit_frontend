@@ -7,7 +7,6 @@ import {Menu} from '../menu/menu';
 import {Day} from '../menu/day';
 
 import {MenuComponent} from '../menu/menu.component';
-import { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } from 'constants';
 
 @Component({
   selector: 'app-menu-day',
@@ -57,6 +56,35 @@ export class MenuDayComponent implements OnInit {
       c++;
      
       return c;
+  }
+  saladVolume(): string {
+    if(this.saladCount() == 2 || this.double){
+      return "~700ml";
+    }
+    else if(this.saladCount() == 1){
+      return "~350ml";
+    }
+    
+    return "";
+  }
+  saladPrice(): number {
+    let p = 0;
+    
+    if(this.salad1)
+      p = this.day.option1.price;
+
+  
+    if(this.salad2)
+      p = p>0? p+(this.day.option2.price/2):this.day.option2.price;
+
+     
+    if(this.salad3)
+      p = p>0? p+(this.day.option3.price/2):this.day.option3.price;
+
+    if(this.double)
+      p += p/2;
+    
+    return p;
   }
   goBack(): void {
     console.log('go back');
