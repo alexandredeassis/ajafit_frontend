@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
+import { Location } from '@angular/common';
 
 import {Menu} from '../menu/menu';
 import {Day} from '../menu/day';
 
 import {MenuComponent} from '../menu/menu.component';
+import { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } from 'constants';
 
 @Component({
   selector: 'app-menu-day',
@@ -20,8 +22,9 @@ export class MenuDayComponent implements OnInit {
   salad1 = false;
   salad2 = false;
   salad3 = false;
+  double = false;
   
-  constructor(private route: ActivatedRoute, private menuComponent: MenuComponent) { }
+  constructor(private route: ActivatedRoute, private menuComponent: MenuComponent, private router: Router) { }
 
   ngOnInit() {
     this.id = +this.route.snapshot.paramMap.get('id');
@@ -54,5 +57,9 @@ export class MenuDayComponent implements OnInit {
       c++;
      
       return c;
+  }
+  goBack(): void {
+    console.log('go back');
+    this.router.navigate(['/dashboard'], {fragment: 'cardapio'});
   }
 }

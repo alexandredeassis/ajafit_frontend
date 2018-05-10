@@ -1,11 +1,11 @@
 .menu-card{
     background-color: bisque;
-    height: 40%;
-    width:60%;
-    padding-left: 0px;
-    padding-right: 0px; 
-    margin:auto; 
-    top:60px;
+    height: 80%;
+    width:80%;
+    position: fixed;
+   
+  top:100px;
+  left:100px;
   }
 .menu-card-header{
     background-color:brown; 
@@ -52,10 +52,12 @@
   }
 
   .salad-section {
-    display: flex;
-    align-content: center;
-    align-items: center;
+    display: grid;
+    
     height: 60px;
+    background-color:green;
+    grid-template-columns: 33% 33% 33%;
+    width:100%;
   }
 
   .salad-item {
