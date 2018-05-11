@@ -15,7 +15,7 @@
                   
                 <mat-card-content  class="card-content" style="height: 60%; top:20px;"> 
                   
-                  <div style="text-align: center; font-style: normal;"><h2>SALADA</h2></div>
+                  <div style="text-align: center; font-style: normal;"><h2>MONTE SUA SALADA</h2></div>
 
                   <div style="display:grid; width:80%; grid-template-columns: 20% 40% 10% 30%; grid-column-gap: 0px; margin:auto;">
                     <div class="salad-descriptions">Cada opção de salada equivale uma porção de volume em torno de 350 ml</div>
@@ -41,26 +41,44 @@
                 </div>
                   <div style="display: grid; height:100px; grid-template-columns: 33% 33% 33%; grid-row-gap: 2em; grid-column-gap: 10px;  width:80%; margin:auto; margin-top:20px; text-align: center;">
                     
-                      <div><mat-checkbox [disabled]="(salad2 && salad3) || (salad2 && double) || (salad3 && double)" class="salad-item" [(ngModel)]="salad1">{{day.option1.descriptions}}</mat-checkbox></div>
-                      <div><mat-checkbox [disabled]="(salad1 && salad3) || (salad1 && double) || (salad3 && double)" class="salad-item" [(ngModel)]="salad2">{{day.option2.descriptions}}</mat-checkbox></div>
-                      <div><mat-checkbox [disabled]="(salad1 && salad2) || (salad1 && double) || (salad2 && double)" class="salad-item" [(ngModel)]="salad3">{{day.option3.descriptions}}</mat-checkbox></div>
+                      <div><mat-checkbox [disabled]="(salad2 && salad3) || (salad2 && double) || (salad3 && double)" class="salad-item" [(ngModel)]="salad1">{{day.option1.descriptions}}</mat-checkbox> - <span style="color: red; font-size: 18px;"><br/>R$ {{day.option1.price | number:'0.00'}}</span></div>
+                      <div><mat-checkbox [disabled]="(salad1 && salad3) || (salad1 && double) || (salad3 && double)" class="salad-item" [(ngModel)]="salad2">{{day.option2.descriptions}}</mat-checkbox> - <span style="color: red; font-size: 18px;"><br/>R$ {{day.option2.price | number:'0.00'}}</span></div>
+                      <div><mat-checkbox [disabled]="(salad1 && salad2) || (salad1 && double) || (salad2 && double)" class="salad-item" [(ngModel)]="salad3">{{day.option3.descriptions}}</mat-checkbox> - <span style="color: red; font-size: 18px;"><br/>R$ {{day.option3.price | number:'0.00'}}</span></div>
                     
                   </div>
 
                   <hr color="primary"/>
-                  <div style="text-align: center; font-style: normal;"><h2>SNACKS</h2></div>
+                  <div style="text-align: center; font-style: normal;"><h2>SNACKS & JUICES</h2></div>
                   <div style="display:grid; grid-template-columns: 33% 33% 33%;">
-                      <div style="background-color: red; height:200px;">
-                       <ul>
+                      <div style="height:200px;">
+                       <ul style="list-style-type: none;">
                          <li *ngFor="let i of day.snacks1">
-                            {{i.id}} - {{i.descriptions}} - {{i.price}}
+                             <mat-checkbox  class="snacks" [(ngModel)]="i.checked">{{i.descriptions}} - R$ {{i.price | number:'0.00'}}</mat-checkbox>
                          </li>
                        </ul> 
                       </div>
-                      <div style="background-color:green; height:200px;">a</div>
-                      <div style="background-color: blue; height:200px;">a</div>
+                      <div style="height:200px;">
+
+                          <ul style="list-style-type: none;">
+                              <li *ngFor="let i of day.snacks2">
+                                  <mat-checkbox  class="snacks" [(ngModel)]="i.checked">{{i.descriptions}} - R$ {{i.price | number:'0.00'}}</mat-checkbox>
+                              </li>
+                            </ul> 
+
+                      </div>
+                      <div style="height:200px;">
+                          <ul style="list-style-type: none;">
+                              <li *ngFor="let i of day.snacks3">
+                                  <mat-checkbox  class="snacks" [(ngModel)]="i.checked">{{i.descriptions}} - R$ {{i.price | number:'0.00'}}</mat-checkbox>
+                              </li>
+                            </ul> 
+
+                      </div>
+                    
                   </div>
+                  <div style="text-align: center; font-style: normal; width:100%; background-color:black; color:white;"><h2>Total: R$ {{total() | number:'0.0'}}</h2></div>
                 </mat-card-content>
+                
           
                 <mat-card-actions style="text-align: center;">
                     <button mat-button class="button-detail" (click)="goBack()">SALVAR</button>
@@ -71,6 +89,3 @@
    </mat-grid-tile>
  </mat-grid-list>
 
-<p>
-  
-</p>

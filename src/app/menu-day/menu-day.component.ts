@@ -67,6 +67,20 @@ export class MenuDayComponent implements OnInit {
     
     return "";
   }
+  total(): number {
+    let p = this.saladPrice();
+    for(let i of this.day.snacks1){
+      p = i.checked? p+i.price:p;
+    }
+    for(let i of this.day.snacks2){
+      p = i.checked? p+i.price:p;
+    }
+    for(let i of this.day.snacks3){
+      p = i.checked? p+i.price:p;
+    }
+    
+    return p;
+  }
   saladPrice(): number {
     let p = 0;
     
