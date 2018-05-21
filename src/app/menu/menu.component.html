@@ -16,10 +16,15 @@
             </mat-card-header>
           <mat-card-content  class="card-content"> 
                       
-            <ul>
-              <li>{{menu.monday.option1.descriptions}}</li>
+            <ul *ngIf="menu.monday.total() == 0">
+              <li>{{menu.monday.option1.descriptions}}- {{menu.monday.option1.checked}}</li>
               <li>{{menu.monday.option2.descriptions}}</li>
               <li>{{menu.monday.option3.descriptions}}</li>
+            </ul>
+
+            <ul *ngIf="menu.monday.total() > 0">
+              <li>{{menu.monday.total}}</li>
+             
             </ul>
           </mat-card-content>
     

@@ -20,13 +20,14 @@ export class MenuComponent implements OnInit {
 
   menu: Menu;
 
-  constructor(private usersComponent: UsersComponent) { this.load();}
+  constructor(private usersComponent: UsersComponent) { }
 
   ngOnInit() {
-  
+    this.load();
   }
 
   load(): void{
+    console.log('loading.....');
     this.menu = new Menu();
     this.menu.id=1;
      
@@ -108,6 +109,8 @@ export class MenuComponent implements OnInit {
    monday.snacks3 = this.end(20);
 
     this.menu.monday=monday;
+
+    console.log('terminou o load..');
   }
 
   end(i: number): Item[]{
@@ -195,6 +198,7 @@ export class MenuComponent implements OnInit {
   }
 
   getDay(id: number): Day{
+    console.log('valor de menu:'+this.menu);
     return this.menu.monday;
   }
    
